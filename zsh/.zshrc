@@ -1,12 +1,12 @@
-# tmux starter
-if command -v tmux &> /dev/null && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  unattached_session=$(tmux ls -F '#{session_name} #{session_attached}' 2>/dev/null | grep -E '^[0-9]+ 0$' | head -1 | cut -d' ' -f1)
-  if [ -n "$unattached_session" ]; then
-    exec tmux attach -t "$unattached_session"
-  else
-    exec tmux
-  fi
-fi
+## tmux starter
+#if command -v tmux &> /dev/null && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#  unattached_session=$(tmux ls -F '#{session_name} #{session_attached}' 2>/dev/null | grep -E '^[0-9]+ 0$' | head -1 | cut -d' ' -f1)
+#  if [ -n "$unattached_session" ]; then
+#    exec tmux attach -t "$unattached_session"
+#  else
+#    exec tmux
+#  fi
+#fi
 
 # Theme
 ZSH_THEMES_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/themes"
