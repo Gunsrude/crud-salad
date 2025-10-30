@@ -8,3 +8,5 @@ ssh_retry() {
         ((wait = wait < max ? wait * 2 : max))
     done
 }
+
+ssh_retry $1
