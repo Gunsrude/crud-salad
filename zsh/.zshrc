@@ -231,7 +231,7 @@ function record() {
 
 # PATH
 if [ -d "${HOME}/.local/bin" ]; then path+=("${HOME}/.local/bin"); fi
-export PATH
+#export PATH
 
 function set_terminal_title() {
     local user_host="%n@%m"
